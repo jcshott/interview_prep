@@ -1,11 +1,21 @@
-def make_fib(N, x=1, y=0):
-""" Takes in a number and returns the input (N) number of fibonacci sequence numbers """
+# def make_fib(N, x=1, y=0):
+# 	""" Takes in a number and returns the input (N) number of fibonacci sequence numbers using recursion"""
 
-	if N == 0:
-		return x
+# 	if N == 0:
+# 		return x
 
+# 	else:
+# 		print x
+# 		make_fib(N-1, x+y, x)
+
+# make_fib(6)
+
+def fib(n):
+	if n == 0: 
+		return 0
+	elif n == 1:
+		return 1
 	else:
-		print x
-		make_fib(N-1, x+y, x)
+		return fib(n-1)+fib(n-2)
 
-make_fib(6)
+print fib(6)
