@@ -19,22 +19,22 @@ def lucky_numbers(n):
         >>> sorted(lucky_numbers(10))
         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     """
-    # lucky_nums = []
+    lucky_nums = []
 
-    # if n > 0:
-    #     while len(lucky_nums) != n:
-    #         x = random.choice(range(1, 11))
+    if n > 0:
+        while len(lucky_nums) != n:
+            x = random.choice(range(1, 11))
             
-    #         if x not in lucky_nums:
-    #             lucky_nums.append(x)
+            if x not in lucky_nums:
+                lucky_nums.append(x)
 
-    #     return lucky_nums
+        return lucky_nums
     
-    # else:
-    #     return lucky_nums
+    else:
+        return lucky_nums
 
-    lucky_nums = random.sample(range(1, 11), n)
-    return lucky_nums
+    # lucky_nums = random.sample(range(1, 11), n)
+    # return lucky_nums
 
 if __name__ == '__main__':
     import doctest
