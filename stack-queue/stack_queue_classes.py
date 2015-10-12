@@ -7,7 +7,7 @@ class Stack(object):
 		self.items.append(item)
 
 	def pop(self):
-		self.items.pop()
+		return self.items.pop()
 
 	def peek(self):
 		return self.items[len(self.items) - 1]
@@ -28,7 +28,7 @@ class Queue(object):
 		self.items.insert(0, item)
 
 	def dequeue(self):
-		self.items.pop()
+		return self.items.pop()
 	
 
 
