@@ -1,2 +1,4 @@
 *.pyc
 *.DS_Store
+dropbox.py
+drop_box_sample.py
