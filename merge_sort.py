@@ -1,4 +1,5 @@
 def merge_sort(a,b):
+	"""merge_sort two sorted lists"""
 	out = []
 	i = 0
 	j = 0
@@ -23,7 +24,25 @@ def merge_sort(a,b):
 
 	return out
 
-lst1 = [0, 2, 5, 7]
-lst2 = [3, 4, 9, 10, 11]
+# lst1 = [0, 2, 5, 7]
+# lst2 = [3, 4, 9, 10, 11]
 
-print merge_sort(lst1, lst2)
+# print merge_sort(lst1, lst2)
+
+def sort_merge_rec(lst):
+	"""sort an unsorted list using merge sort. takes in list, returns that list, sorted"""
+
+	if len(lst) > 1:
+		left = sort_merge_rec(lst[:len(lst)/2])
+		right = sort_merge_rec(lst[len(lst)/2:])
+		return merge_sort(left, right)
+	else:
+		return lst
+
+if __name__=='__main__':
+    from timeit import Timer
+
+    t = Timer("sort_merge_rec", "from __main__ import sort_merge_rec")
+    print sort_merge_rec([2, 5, 3, 7, 6, 1]) 
+    print t.timeit()
+	
