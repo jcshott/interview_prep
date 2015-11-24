@@ -44,3 +44,13 @@ def is_pal(s):
 print is_pal("radar")
 print is_pal("corey")
 print is_pal("abdccdba")
+
+
+def factorial_recursive(num):
+	if num == 1 or num == 2:
+		return num
+	else:
+		return factorial_recursive(num-1) * num
+
+print factorial_recursive(5)
+print factorial_recursive(1)
