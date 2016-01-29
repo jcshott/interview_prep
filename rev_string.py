@@ -30,3 +30,15 @@ def rev_string_list(mystring):
 print rev_string_list("dog")
 print rev_string_list("apple")
 print rev_string_list("ruby")
+
+def reverse_string_recursion(astring):
+	"""use recursion to reverse a string"""
+
+	if len(astring) < 1:
+		return astring
+	else:
+		return reverse_string_recursion(astring[1:]) + astring[0]
+
+print reverse_string_recursion("joy")
+print reverse_string_recursion("Corey")
+print reverse_string_recursion("Ruby Roo")

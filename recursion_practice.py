@@ -44,6 +44,7 @@ def is_pal(s):
 print is_pal("radar")
 print is_pal("corey")
 print is_pal("abdccdba")
+print is_pal("ruby")
 
 
 def factorial_recursive(num):
