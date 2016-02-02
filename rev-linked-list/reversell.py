@@ -32,11 +32,24 @@ def reverse_linked_list(head):
     >>> reverse_linked_list(ll).as_string()
     '321'
     """
+
+    out_head = None
+    n = head
+
+    while n:
+        out_head = Node(n.data, out_head)
+        n = n.next
+    return out_head
     
 
 
 
 if __name__ == '__main__':
-    import doctest
-    if doctest.testmod().failed == 0:
-        print "\n*** ALL TESTS PASSED. RIGHT ON!\n"
+    
+    ll= Node(1, Node(2, Node(3)))
+    print reverse_linked_list(ll).as_string()
+    print ll.as_string()
+
+    # import doctest
+    # if doctest.testmod().failed == 0:
+    #     print "\n*** ALL TESTS PASSED. RIGHT ON!\n"
