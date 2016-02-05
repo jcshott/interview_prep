@@ -83,14 +83,14 @@ def add_linked_lists(l1, l2):
 
     while l1_current.data:
         str_1 = str(l1_current.data) + str_1
-        if l1_current.next != None:
+        if l1_current.next:
             l1_current = l1_current.next
         else:
             break
 
     while l2_current.data:
         str_2 = str(l2_current.data) + str_2
-        if l2_current.next != None:
+        if l2_current.next:
             l2_current = l2_current.next
         else:
             break

@@ -46,10 +46,6 @@ def reverse_linked_list(head):
 
 if __name__ == '__main__':
     
-    ll= Node(1, Node(2, Node(3)))
-    print reverse_linked_list(ll).as_string()
-    print ll.as_string()
-
-    # import doctest
-    # if doctest.testmod().failed == 0:
-    #     print "\n*** ALL TESTS PASSED. RIGHT ON!\n"
+    import doctest
+    if doctest.testmod().failed == 0:
+        print "\n*** ALL TESTS PASSED. RIGHT ON!\n"
