@@ -53,8 +53,8 @@ class Node(object):
         include *everyone* under them, not just people who directly report to
         them.
         """
-        if not self.children:
-            return 0
+        # if not self.children:
+        #     return 0
 
         emps = 0
         for x in self.children:

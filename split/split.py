@@ -21,6 +21,20 @@ def split(astring, splitter):
       when it is not passed anything for the splitter -- you do
       not need to implemented that.
     """
+    out = [] # ["", ]
+    
+        # check if splitter is part of string at all
+        if splitter not in astring:
+            out.append(astring)
+
+        else:
+            idx = astring.index(splitter)
+            end_idx = idx + len(splitter)
+            out.append(astring[:idx])
+            astring = astring[end_idx:]
+
+
+    return out
 
 
 if __name__ == '__main__':
