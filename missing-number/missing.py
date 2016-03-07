@@ -26,13 +26,13 @@ def missing_number(nums, max_num):
     # 		return item
 
     # initialize a new list to fill in
-    new_lst = [None] * max_num
+    # new_lst = [None] * max_num
 
-    # add each num we have to the new_lst at index it should be at (i.e. 1 at idx=0, etc)
-    for x in nums:
-        new_lst[x-1] = x
+    # # add each num we have to the new_lst at index it should be at (i.e. 1 at idx=0, etc)
+    # for x in nums:
+    #     new_lst[x-1] = x
 
-    return new_lst.index(None) + 1
+    # return new_lst.index(None) + 1
 
 
     # O(n log n) sort and then go through once to check
@@ -46,6 +46,12 @@ def missing_number(nums, max_num):
     #     if num != idx+1:
     #         return idx+1
 
+    ## Math version
+
+    full_sum = sum([x for x in range(1, max_num+1)])
+    given_sum = sum(nums)
+
+    return full_sum - given_sum
 
 if __name__ == '__main__':
     import doctest
