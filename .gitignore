@@ -7,7 +7,6 @@ drop_box_sample.py
 Interview_Problems/
 JamesonPractice/
 project_euler/
-battleship/
 check-balanced/
 coins/
 concat-lists/
@@ -22,11 +21,8 @@ minesweeper/
 num_inc_dec.py
 numword/
 primes/
-print-recursively/
-recursive_index/
 remove-ll-node/
 rev-linked-list-in-place/
-roman-numerals/
 show-evens/
 smallest-diff/
 spiral/

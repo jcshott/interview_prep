@@ -39,7 +39,7 @@ def is_pal(s):
 		return True
 	else:
 		return is_pal(s[1:-1]) and s[0] == s[-1]
-	return False
+
 
 print is_pal("radar")
 print is_pal("corey")

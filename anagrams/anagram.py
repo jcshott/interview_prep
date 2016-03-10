@@ -20,7 +20,19 @@ def find_most_anagrams_from_wordlist(wordlist):
     >>> find_most_anagrams_from_wordlist(all_words)
     'angor'
     """
-    
+    anagrams = {}
+
+    for word in wordlist:
+        sorted_word = ''.join(sorted(word))
+        anagrams.setdefault(sorted_word, []).append(word)
+
+
+    most_anagrams = []
+    for val in anagrams.values():
+        if len(val) > len(most_anagrams):
+            most_anagrams = val
+
+    return most_anagrams[0]
 
 
 if __name__ == "__main__":

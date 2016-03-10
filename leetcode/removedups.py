@@ -1,6 +1,7 @@
 def removeDuplicates(nums):
     """
-    Given a sorted array/list, remove duplicate numbers from array (in place) and return length.  On leetcode, while you only return the length, it also judged if you had right list so can't just have a counter.
+    Given a sorted array/list, remove duplicate numbers from array (in place) and return length.  
+    On leetcode, while you only return the length, it also judged if you had right list so can't just have a counter.
 
     :type nums: List[int]
     :rtype: int
