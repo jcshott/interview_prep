@@ -20,14 +20,14 @@ def rev_string(astring):
     You may NOT use the reversed() function!
     """
     #### List answer - 2 O(N) aka O(N) because 2 loops but not nested. 2 O(N) space
-    ltr_lst = list(astring)
+    # ltr_lst = list(astring)
 
-    out = ""
+    # out = ""
 
-    for x in range(len(ltr_lst)):
-        out = out + ltr_lst.pop()
+    # for x in range(len(ltr_lst)):
+    #     out = out + ltr_lst.pop()
     
-    return out
+    # return out
 
     ### Recursion answer 
     # if len(astring) <= 1:
@@ -48,10 +48,19 @@ def rev_string(astring):
 
     # return "".join(ltr_lst)
 
+    out = ""
+
+    # go through the length of the string, backwards
+    for i in range(len(astring), 0, -1):
+        # grab the char at the index minus 1. if we have range(len(astring) - 1, 0, -1), 
+        #we miss the last char because it doesn't incl the astring[0] char.
+        # if we do it this way, then we don't have an index error and we grab last char because 1-1 = 0 and we never hit 0-1
+        out += astring[i-1]
+    return out
 
 
 if __name__ == '__main__':
-    # print rev_string("porcupine")
+
     import doctest
     if doctest.testmod().failed == 0:
         print "\n*** ALL TESTS PASSED. !KROW DOOG\n"

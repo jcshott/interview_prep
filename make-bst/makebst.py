@@ -134,7 +134,22 @@ def make_bst(nums):
         >>> tree6.right.left.data
         5
     """
+    # if we've emptied the list, return None. is is our base case
+    if not nums:
+        return None
 
+    # else, find the midpoint
+    mid_idx = len(nums)/2
+
+    # make anode from the midpoint value
+    node = BinaryNode(nums[mid_idx])
+
+    # our left side will be nums less than our mid_idx point
+    node.left = make_bst(nums[:mid_idx])
+    # our right will be nums greater than our mid_idx point
+    node.right = make_bst(nums[mid_idx+1:])
+
+    return node
    
 
 

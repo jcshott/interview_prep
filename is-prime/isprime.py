@@ -54,7 +54,7 @@ def is_prime(num):
     while x * x <= num: 
         if num % x == 0:
             return False
-        x += 1
+        x += 2
     
     return True
 

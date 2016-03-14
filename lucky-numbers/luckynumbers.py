@@ -19,27 +19,23 @@ def lucky_numbers(n):
         >>> sorted(lucky_numbers(10))
         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     """
-    lucky_set = set()
+    # lucky_set = set()
 
-    while len(lucky_set) < n:
-        x = random.choice(range(1, 11))
-        lucky_set.add(x)
+    # while len(lucky_set) < n:
+    #     x = random.choice(range(1, 11))
+    #     lucky_set.add(x)
 
-    lucky_lst = list(lucky_set)
-    return lucky_lst
-    # lucky_nums = []
-
-    # if n > 0:
-    #     while len(lucky_nums) != n:
-    #         x = random.choice(range(1, 11))
-            
-    #         if x not in lucky_nums:
-    #             lucky_nums.append(x)
-
-    #     return lucky_nums
+    # lucky_lst = list(lucky_set)
+    # return lucky_lst
     
-    # else:
-    #     return lucky_nums
+    nums = range(1,11)
+    lucky_nums = []
+
+    for x in range(n):
+        num = random.choice(nums)
+        nums.remove(num)
+        lucky_nums.append(num)
+    return lucky_nums
 
 
 if __name__ == '__main__':
