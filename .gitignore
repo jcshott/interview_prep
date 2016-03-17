@@ -21,7 +21,6 @@ minesweeper/
 num_inc_dec.py
 numword/
 primes/
-remove-ll-node/
 rev-linked-list-in-place/
 show-evens/
 smallest-diff/
@@ -32,3 +31,6 @@ tower_hanoi.py
 tower_hanoi_hb.py
 word-prefixes/
 zero-matrix/
+hanoi_helper.py
+merge2.py
+recursive_index/rec_indx.py
