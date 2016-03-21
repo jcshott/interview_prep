@@ -42,7 +42,6 @@ class Node(object):
 		else:	
 			current = self
 			
-
 			while current.next.data != data:
 				current = current.next
 			if current.next:
@@ -61,11 +60,13 @@ def test_methods():
 	print "remove: "
 	test.remove_node(3)
 	print test.as_string()
+
 	print "remove from front: "
 	test2 = Node(2, Node(1, Node(3)))
 	print test2.as_string()
 	test2.remove_node(2)
 	print test2.as_string()
+
 	
 if __name__ == '__main__':
 	test_methods()
