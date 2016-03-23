@@ -14,9 +14,10 @@
 class Board(object):
     
     def __init__(self, players):
-        self.board = [[" ", " ", " "], 
-                      [" ", " ", " "], 
-                      [" ", " ", " "]]
+        self.board = [[" ", "1", "2", "3"],
+                      ["1", " ", " ", " "], 
+                      ["2", " ", " ", " "], 
+                      ["3", " ", " ", " "]]
         self.current_player = players[0]
         self.players = players
         
@@ -34,12 +35,14 @@ class Board(object):
         symbol = self.current_player.symbol
         if self.move_valid(x, y):
             self.board[x][y] = symbol
+            return True
         else:
             print "invalid move, try again."
+            return False
     
     def move_valid(self, x, y):
         # check if row & column are within matrix
-        if x > 2 or y > 2:
+        if x > 3 or y > 3:
             return False
         
         # check if row & col are empty
@@ -51,21 +54,21 @@ class Board(object):
         # Check if there is a winner
         # check if given row has a win
         row = self.board[x]
-        if row[0] == row[1] and row[1] == row[2]:
+        if row[1] == row[2] and row[2] == row[3]:
             print "Winner"
             return True
         # check if given col has a win
-        if (self.board[0][y] == self.board[1][y] and 
-            self.board[1][y] == self.board[2][y]):
+        if (self.board[1][y] == self.board[2][y] and 
+            self.board[2][y] == self.board[3][y]):
             print "Winner"
             return True
         # check if diag has a win
-        if (self.board[0][0] == self.board[1][1] and
-            self.board[1][1] == self.board[2][2]) and self.board[0][0] != " ":
+        if (self.board[1][1] == self.board[2][2] and
+            self.board[2][2] == self.board[3][3]) and self.board[1][1] != " ":
             print "Winner"
             return True
-        if (self.board[0][2] == self.board[1][1] and 
-            self.board[1][1] == self.board[2][0]) and self.board[0][2] != " ":
+        if (self.board[1][3] == self.board[2][2] and 
+            self.board[2][2] == self.board[3][1]) and self.board[1][3] != " ":
             print "Winner"
             return True
         # check if everything has been filled (draw)
@@ -89,7 +92,8 @@ class Player(object):
 
         
 def main():
-#
+#TODO: make the board any size
+# TODO: make the board 3D
 #
 # Board, 2 Players
 #
@@ -103,6 +107,7 @@ def main():
     """ Start the game """
     player1 = Player("O")
     player2 = Player("X")
+
     game_board = Board([player1, player2])
     
     while True:
@@ -112,10 +117,13 @@ def main():
         coord_list = coords.split(" ")
         row = int(coord_list[0])
         col = int(coord_list[1])
-        game_board.make_move(row, col)
-        if game_board.gameover(row, col):
-            break
-        game_board.switch_player()
+        if game_board.make_move(row, col):
+            game_board.switch_player()
+            if game_board.gameover(row, col):
+                break
+        
     game_board.print_board()
 
-main()
+if __name__ == '__main__':
+    
+    main()
