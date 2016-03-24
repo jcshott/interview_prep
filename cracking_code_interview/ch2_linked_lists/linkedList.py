@@ -25,12 +25,15 @@ class LinkedList(object):
 
 	def add_node(self, node):
 
-		current = self.head
+		if not self.head:
+			self.head = node
+		else:
+			current = self.head
 
-		while current.next:
-			current = current.next
+			while current.next:
+				current = current.next
 
-		current.next = node
+			current.next = node
 	
 	def remove_node(self, data):
 
