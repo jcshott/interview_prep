@@ -1,9 +1,8 @@
-class Node(object):
-	""" class for a node in a linked list """
+class LinkedList(object):
+	"""class for a linked list"""
 
-	def __init__(self, data, next=None):
-		self.data = data
-		self.next = next
+	def __init__(self, head=None):
+		self.head = head
 
 	def as_string(self):
 		"""Represent data for this node and it's successors as a string.
@@ -16,7 +15,7 @@ class Node(object):
 		"""
 
 		out = []
-		n = self
+		n = self.head
 		
 		while n:
 			out.append(str(n.data))
@@ -26,21 +25,21 @@ class Node(object):
 
 	def add_node(self, node):
 
-		current = self
+		current = self.head
 
 		while current.next:
 			current = current.next
 
 		current.next = node
-
+	
 	def remove_node(self, data):
 
-		if self.data == data:
-			self.data = self.next.data
-			self.next = self.next.next
+		if self.head.data == data:
+			self.head = self.head.next
+			# self.hnext = self.next.next
 
 		else:	
-			current = self
+			current = self.head
 			
 			while current.next.data != data:
 				current = current.next
@@ -49,9 +48,16 @@ class Node(object):
 			else:
 				return "node not found"
 
+class Node(object):
+	""" class for a node in a linked list """
+
+	def __init__(self, data, next=None):
+		self.data = data
+		self.next = next
+
 def test_methods():
 	print "add: "
-	test = Node(1, Node(2))
+	test = LinkedList(Node(1, Node(2)))
 	print test.as_string()
 
 	test.add_node(Node(3))
@@ -62,7 +68,7 @@ def test_methods():
 	print test.as_string()
 
 	print "remove from front: "
-	test2 = Node(2, Node(1, Node(3)))
+	test2 = LinkedList(Node(2, Node(1, Node(3))))
 	print test2.as_string()
 	test2.remove_node(2)
 	print test2.as_string()

@@ -1,11 +1,11 @@
-from linkedList import Node
+from linkedList import Node, LinkedList
 
-def remove_dups(head):
-	"""remove duplicate nodes from a linked list, given the head node"""
+def remove_dups(ll):
+	"""remove duplicate nodes from an unsorted linked list"""
 
 	nodes_seen = {}
 	previous = None
-	current = head
+	current = ll.head
 
 
 	while current:
@@ -27,9 +27,9 @@ def remove_dups(head):
 			previous = current
 			current = current.next
 
-	return head
+	return ll
 
-my_list = Node(2, Node(4, Node(1, Node(2, Node(7, Node(1))))))
+my_list = LinkedList(Node(2, Node(4, Node(1, Node(2, Node(7, Node(1)))))))
 print "testing having to remove last node"
 print "my_list before: ", my_list.as_string()
 remove_dups(my_list)
@@ -37,7 +37,7 @@ print "my_list after: ", my_list.as_string()
 
 print "testing not having to remove last node: "
 
-another_list = Node(4, Node(4, Node(1, Node(2, Node(7)))))
+another_list = LinkedList(Node(4, Node(4, Node(1, Node(2, Node(7))))))
 
 print "another_list before: ", another_list.as_string()
 remove_dups(another_list)

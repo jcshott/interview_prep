@@ -1,4 +1,4 @@
-from linkedList import Node
+from linkedList import Node, LinkedList
 
 def partition(ll, x):
 	""" write code to partition a LL around a value x, 
@@ -20,7 +20,7 @@ def partition(ll, x):
 
 	# go through our LL and take out the nodes >= and add to our move_list
 
-	current = ll
+	current = ll.head
 
 	while current:
 		if current.data >= x:
@@ -34,7 +34,7 @@ def partition(ll, x):
 	for n in move_list:
 		ll.add_node(n)
 
-my_ll = Node(3, Node(5, Node(8, Node(5, Node(9, Node(2, Node(1)))))))
+my_ll = LinkedList(Node(3, Node(5, Node(8, Node(5, Node(9, Node(2, Node(1))))))))
 
 print my_ll.as_string()
 
