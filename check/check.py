@@ -45,9 +45,17 @@ def check(king, queen):
     >>> check("E6", "F4")
     False
     """
+    if king[0] == queen[0] or king[1] == queen[1]:
+        return True # same vertical or horizontal
 
+    # convert the letter to ASCII num to compare for diagonal
     
+    k_converted = ord(king[0])
+    q_converted = ord(queen[0])
 
+    # if diff btwn the first nums (converted ltr), and second nums are both odd or  both even, then in check
+
+    return abs(k_converted - q_converted) == abs(int(king[1]) - int(queen[1]))
 
 if __name__ == '__main__':
     import doctest
