@@ -10,6 +10,9 @@ def add_digits(num):
 	>>> add_digits(12)
 	3
 
+	>>> add_digits(795)
+	3
+
 	"""
 
 	a = num/10

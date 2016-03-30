@@ -31,6 +31,7 @@ def merge_sort(lst):
 			lst[k]=left[i]
 			i+=1
 			k+=1
+		
 		while j < len(right):
 			lst[k]=right[j]
 			j+=1
