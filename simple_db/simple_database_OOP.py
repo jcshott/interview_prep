@@ -23,7 +23,6 @@
 #Stuff it does:
  #   to database - dictionary
     
-# 
 import sys
 
 class Database(object):
