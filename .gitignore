@@ -5,7 +5,6 @@ drop_box_sample.py
 *.ipynb
 .ipynb_checkpoints/
 Interview_Problems/
-JamesonPractice/
 project_euler/
 check-balanced/
 concat-lists/
@@ -29,7 +28,6 @@ tic-tac-random/
 tower_hanoi.py
 tower_hanoi_hb.py
 word-prefixes/
-zero-matrix/
 hanoi_helper.py
 merge2.py
 recursive_index/rec_indx.py
