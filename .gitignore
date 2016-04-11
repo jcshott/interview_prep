@@ -9,7 +9,6 @@ project_euler/
 check-balanced/
 concat-lists/
 dec2bin/
-friends/
 insertion-sort/
 interview_cake/apple_stock.py
 josephus/
@@ -19,7 +18,6 @@ minesweeper/
 num_inc_dec.py
 numword/
 pattern-match/
-primes/
 rev-linked-list-in-place/
 show-evens/
 smallest-diff/
