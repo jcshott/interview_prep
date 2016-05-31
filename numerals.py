@@ -13,6 +13,8 @@ def numerals(my_numerals):
 	1950
 	>>> numerals('')
 	0
+	>>> numerals("DCXXI")
+	621
 	"""
 
 	eval_str = my_numerals
