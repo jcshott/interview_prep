@@ -9,7 +9,6 @@ project_euler/
 check-balanced/
 concat-lists/
 dec2bin/
-interview_cake/apple_stock.py
 josephus/
 largest-sum/
 linked_lists/
@@ -29,3 +28,5 @@ hanoi_helper.py
 merge2.py
 recursive_index/rec_indx.py
 simple_db/simple_database.py
+JamesonPractice/
+interactive-coding-challenges/

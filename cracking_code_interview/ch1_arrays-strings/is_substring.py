@@ -4,7 +4,7 @@ def is_substring(str1, str2):
 	# find the shorter string, which we will set to 'a' and longer is 'b'
 	a = ""
 	b = ""
-	
+
 	if len(str1) <= len(str2):
 		a = str1
 		b = str2

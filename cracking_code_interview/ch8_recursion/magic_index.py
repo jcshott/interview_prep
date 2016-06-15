@@ -7,7 +7,7 @@ def magic_index_recursion(array):
 
 	def _magic_idx(array, idx):
 
-		"""since we are only given a sorted array in problem, 
+		"""since we are only given a sorted array in problem,
 		define recursive function to call, adding idx counter
 		"""
 

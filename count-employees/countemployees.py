@@ -33,7 +33,7 @@ And test our counting function::
 We provide a non-recursive version, let's make sure that gives the same
 answer::
 
-    jane.count_employees_nonrecursive()
+    >>> jane.count_employees_nonrecursive()
     8
 
 """
@@ -53,17 +53,27 @@ class Node(object):
         include *everyone* under them, not just people who directly report to
         them.
         """
-        # if not self.children:
-        #     return 0
+        # depth first search
 
         emps = 0
         for x in self.children:
             emps += x.count_employees() + 1
         return emps
 
+    def count_employees_nonrecursive(self):
+        # breadth first search
+        emps = 0
+        queue = [x for x in self.children]
+
+        while queue:
+            curr = queue.pop(0)
+            emps += 1
+            queue.extend([y for y in curr.children])
+        return emps
+
+
 
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
         print "\n*** ALL TESTS PASSED. YOU ARE A TREE GENIUS!\n"
-

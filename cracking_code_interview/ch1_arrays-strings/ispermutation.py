@@ -1,5 +1,5 @@
 def is_permutation(str1, str2):
-	""" check if one string is a substring of another """
+	""" check if one string is a permutation of another """
 
 	char_a = {}
 	char_b = {}
@@ -9,7 +9,7 @@ def is_permutation(str1, str2):
 
 	for b in str2:
 		char_b[b] = char_b.get(b, 0) + 1
-	
+
 	return char_a == char_b
 
 assert is_permutation("aabbcda", "cdababa") == True
