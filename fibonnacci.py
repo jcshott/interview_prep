@@ -1,7 +1,7 @@
 def fibonnacci(n):
-	""" 
+	"""
 	fibonnacci sequence is 1, 1, 2, 3, 5....etc.
-	
+
 	input: n-integer
 	output: the n'th fibonnacci number (i.e. n=3; output=2 )
 
@@ -16,7 +16,7 @@ def fibonnacci(n):
 
 	>>> fibonnacci(2)
 	1
-	
+
 	"""
 	### iterative
 	fib_1 = 1

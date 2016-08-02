@@ -10,30 +10,30 @@ def fib_nums(n):
 
 	"""
 	### loop answer -> O(N) because just checking and looping
-	# if n <= 0:
-	# 	return "greater than zero, please"
-	
-	# if n <= 2:
-	# 	return 1
-	
-	# else:
-	# 	x = 1
-	# 	y = 1
-	# 	z = 0
-		
-	# 	for i in range(n-2):
-	# 		z = x + y
-	# 		x = y
-	# 		y = z
-
-	# 	return z
-
-	### Recursion answer.  much higher O(N) runtime
+	if n <= 0:
+		return "greater than zero, please"
 
 	if n <= 2:
 		return 1
 
-	return fib_nums(n-1) + fib_nums(n-2)
+	else:
+		x = 1
+		y = 1
+		z = 0
+
+		for i in range(n-2):
+			z = x + y
+			x = y
+			y = z
+
+		return z
+
+	### Recursion answer.  much higher O(N) runtime
+	#
+	# if n <= 2:
+	# 	return 1
+	#
+	# return fib_nums(n-1) + fib_nums(n-2)
 
 if __name__ == '__main__':
 	import doctest

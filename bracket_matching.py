@@ -28,8 +28,7 @@ def bracket_matching(astring):
                 return False
             if open_brackets.index(stack.pop()) != closing_brackets.index(char):
                 return False
-        else:
-            continue
+
     if stack:
         return False
     return True

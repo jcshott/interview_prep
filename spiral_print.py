@@ -30,3 +30,6 @@ def print_spiral(matrix):
     while curr_row > last_start_row:
         print matrix[curr_row][curr_col]
         curr_row -= 1
+
+
+print_spiral([[1,2,3], [4,5,6], [7,8,9]])
